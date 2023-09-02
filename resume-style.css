@@ -1,0 +1,561 @@
+body
+{
+	margin: 0px;
+}
+
+/*Body header */
+
+#body-header
+{
+	height: 65vh;
+	background-image: url(macbook-mouse.jpg);
+/*	background-image: linear-gradient(50deg, #43cea2, #185a9d 80%);*/
+	opacity: 0.8;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+}
+
+/* Horizontal lists */
+
+.horizontal-list
+{
+	list-style: none;
+	padding-left: 0px; /*there's some padding so make it 0 */
+	margin: 0px;
+/*	position: fixed; ???????????????? */
+}
+
+.horizontal-list li
+{
+	display: inline-block;
+	margin: 3vh 3vw 3vh 3vw;
+}
+
+.horizontal-list li a
+{
+	text-decoration: none;
+	color: white;
+	font-size: 2rem;
+}
+
+.horizontal-list li a:hover
+{
+	transition: all 0.3s ease-in-out;
+/*	color: #79db8b;*/
+	color: darkslategrey;
+	border-bottom: 1px solid white;
+}
+
+.horizontal-social-list
+{
+	list-style: none;
+	padding-left: 0px; /*there's some padding so make it 0 */
+	margin: 0px;
+/*	position: fixed; ???????????????? */
+}
+
+.horizontal-social-list li
+{
+	display: inline-block;
+	margin: 10px 20px 10px 20px;
+}
+
+.horizontal-social-list li a
+{
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+}
+
+/* Center align class */
+
+.element-center
+{
+	text-align: center;
+}
+
+/* Name and Social Icons */
+
+#name-social-container
+{
+	margin-top: 13vh;
+}
+
+#my-name
+{
+	font-size: 4rem;
+	letter-spacing: 0.1rem;
+	color: white;
+	font-weight: 700;
+}
+
+.social-icons li a i
+{
+	padding: 10px;
+	border-radius: 50%;
+}
+
+.social-icons li a i:hover
+{
+	transition: all 0.4s ease-in;
+	color: lightslategrey;
+	box-shadow: 0px 0px 8px 5px white;/* This is the border color, no need to set border-color separately*/
+/*	color: #2FA1A0;*/
+/*	background: white;*/
+}
+
+section
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+section:nth-child(2n+1) /* Section numbers that are multiples of 2 will have light grey background color */
+{
+	background-color: #9e9b9b29;
+}
+
+section:nth-child(2n) /* Section numbers that are odd will have light grey background color, can use odd / even for 2n+1 / 2n alternatively */
+{
+	background-color: white;
+}
+
+.section-heading
+{
+	width: auto;
+	padding: 20px 10px;
+}
+
+.section-heading span
+{
+	font-weight: 500;
+	font-size: 40px;
+	color: #2857a4;
+	display: inline-block;
+	font-family: sans-serif;
+/*	margin-right: 0.5rem;*/
+}
+
+/* Common margin classes */
+.margin-section-heading
+{
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+/* Main */
+
+/* About section */
+
+#my-img
+{
+	height: 20rem;
+	width: 20rem;
+	margin: auto; /* To bring image to center */
+	margin-top: -20vh;
+}
+
+#my-img img
+{
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	box-shadow: 0px 0px 4px 6px white;/*#F0F0F0;*/
+}
+
+#about
+{
+	position: relative; /* To bring profile pic above background image */
+}
+
+#about-content
+{
+	margin: 6vh 10vw 10vh 10vw;
+	color: #505252;/*#646867;/*grey;*/
+	font-size: 2.1rem;
+	text-align: justify;
+	line-height: 3rem;
+	font-family: sans-serif;
+}
+
+#leetcode-link a
+{
+	text-decoration: none;
+}
+
+.color-text-blue
+{
+	color: darkblue;
+}
+
+
+/* Skills section */
+
+#skills-display
+{
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 5rem;
+}
+
+.skill-progress
+{
+	width: 15rem;
+	height: 1.5rem;
+	background-color: darkgrey;
+	border-radius: 0.8rem;
+	box-shadow: 0px 0px 2px 2px #b9b9b9 inset;
+	margin: 2rem;
+}
+
+.skill-name /* or .skill-progress>div */
+{
+	border-radius: 20px 0px 0px 20px;
+}
+
+.skill-name span
+{
+	color: white;
+	font-size: 1.2rem;
+	margin-left: 10px;
+}
+
+#cpp-skill
+{
+	background: linear-gradient(-50deg, #185a9d, #dc2430);
+	width: 85%;
+	height: inherit;
+}
+
+#html-skill
+{
+	background-image: linear-gradient(50deg, #43cea2, #185a9d);
+	width: 80%;
+	height: inherit;
+}
+
+#css-skill
+{
+	background-image: linear-gradient(-50deg, #4568dc, #b06ab3);
+	width: 80%;
+	height: inherit;
+}
+
+#dsa-skill
+{
+	background: linear-gradient(50deg, #36d1dc, #5b86e5);
+	width: 65%;
+	height: inherit;
+}
+
+#sql-skill
+{
+	background-image: linear-gradient(50deg, #ff512f, #dd2476);
+	width: 70%;
+	height: inherit;
+}
+
+#py-skill
+{
+	background: linear-gradient(50deg, #bdc3c7, #2c3e50);
+/*	background: linear-gradient(-67.7deg, rgb(252, 185, 125) -0.9%, rgb(245, 231, 106) 22.8%, rgb(160, 236, 208) 50.3%, rgb(57, 178, 209) 75.5%, rgb(183, 174, 193) 100.2%);*/
+	width: 55%;
+	height: inherit;
+}
+
+#java-skill
+{
+	background-image: linear-gradient(50deg, #cc2b5e, #753a88);
+	width: 55%;
+	height: inherit;
+}
+
+#packet-skill
+{
+	background-image: linear-gradient(-50deg, #3a1c71, #d76d77, #ffaf7b);
+	width: 60%;
+	height: inherit;
+}
+
+
+
+/* Timeline */
+
+.timeline
+{
+	position: relative;
+	width: 60%;
+/*	border: 2px solid black;*/
+	margin-bottom: 5rem;
+}
+
+.timeline-box
+{
+	position: relative;
+	margin: 20px;
+    width: 35%; /* percentage in general is calculated relative to parent */
+    left: 3%;
+    min-height: 200px;
+/*    border: 2px solid black;*/
+    padding: 20px; 
+}
+
+.timeline-box:nth-child(even)
+{
+    left: 53%;
+}
+
+.timeline-box:nth-child(odd)::after
+{
+	content: '';
+	position: absolute;
+	top: 25%;
+	right: -14.5%;
+	border-radius: 50%;
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: grey;
+	z-index: 1;
+}
+
+.timeline-box:nth-child(even)::before
+{
+	content: '';
+	position: absolute;
+	top: 25%;
+	left: -14%;
+	border-radius: 50%;
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: grey;
+	z-index: 1;
+}
+
+#timeline-divider
+{
+    position: absolute;
+    height: 65%;
+    width: 0;
+    top: 10%;
+    left: 50%;
+    border: 2px dashed #0096fa6b;
+}
+
+#timeline-divider .timeline-traveller
+{
+	position: sticky;
+	top: 25%;
+	z-index: 2;
+}
+
+#timeline-divider i
+{
+	transform: rotate(90deg);
+	margin-top: -35px;
+	display: block;
+	color: #2857a4;
+}
+
+
+.org-logo img
+{
+	max-height: 32px;
+	vertical-align: middle;
+}
+
+.org-name
+{
+	vertical-align: middle;
+	color: darkblue;
+	font-size: 1.5rem;
+	font-family: sans-serif;
+}
+
+.org-course
+{
+	color: #F78308;
+	font-size: 1.4rem;
+	font-family: sans-serif;
+}
+
+.org-time
+{
+	color: lightslategrey;
+	font-size: 1.2rem;
+	font-family: sans-serif;
+}
+
+.org-content
+{
+	color: #505252;
+	font-size: 1.1rem;
+	font-family: sans-serif;
+	text-align: justify;
+	line-height: 1.4;
+}
+
+.right-align
+{
+	line-height: 1.4;
+	text-align: right;
+}
+
+.left-align
+{
+	line-height: 1.4;
+	text-align: left;
+}
+
+
+
+/* Portfolio section */
+
+#portfolio-display
+{
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 5rem;
+}
+
+.portfolio-img-container
+{
+    max-width: 480px;
+    overflow: hidden;
+    margin: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.portfolio-img-container img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-desc
+{
+    position: absolute; /* Why????? */
+    top: 0; /* Why????? */
+    left: 0; /* Why????? */
+    height: 100%;
+    width: 100%;
+	color: transparent;
+	text-align: center;
+	font-size: 4rem;
+	font-family: sans-serif;
+	padding: 10px;
+}
+
+.portfolio-img-container:hover
+{
+	box-shadow: 0px 0px 20px 6px #74ADC8;
+}
+
+.portfolio-img-container:hover .portfolio-desc
+{
+	transition: all 0.5s ease-in-out;
+    background-color: #80808078;
+    color: white;
+}
+
+/* Contact section */
+
+#contact
+{
+	background-image: linear-gradient(50deg, #43cea2, #185a9d 80%);
+/*	background-image: linear-gradient(50deg, #185a9d, #dc2430);*/
+	color: white;
+	padding-bottom: 1rem;
+}
+
+#contact span
+{
+	color: white;
+}
+
+#contact-form-container
+{
+	width: 90vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#contact-form
+{
+/*	border: 1px solid white;*/
+	width: 33vw;
+	margin-bottom: 50px;
+}
+
+#contact-form input, textarea
+{
+	margin-bottom: 40px;
+	width: 33vw;
+	padding: 10px 20px;
+	background: transparent;
+	border: solid 0px transparent;
+	border-bottom: 2px solid white;
+	font-size: 1.3rem;
+	color: white;
+}
+
+#contact-form button[type="submit"]
+{
+	padding: 10px 20px;
+	background: transparent;
+	border: solid 2px white;
+	font-size: 1.1rem;
+	color: white;
+	margin-left: 35%;
+}
+
+#contact-form button[type="submit"]:hover
+{
+/*	color: #13386fe0;*/
+	color: #2FA1A0;
+	background: white;
+}
+
+#my-details-container
+{
+	width: 40vw;
+/*	border: 1px solid white;*/
+	margin-bottom: 50px;
+	padding: 18px 0 0 0;
+}
+
+.my-details-heading
+{
+	font-size: 1.4rem;
+	font-weight: 600;
+	margin-bottom: 20px;
+	padding-left: 30px;
+}
+.my-details-info-container
+{
+	font-size: 1rem;
+	margin-bottom: 15px;
+	padding-left: 30px;
+}
+
+input:focus, select:focus, textarea:focus, button:focus
+{
+    outline: none;
+}
+
+
+
+
+
+
+
