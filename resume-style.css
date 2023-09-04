@@ -30,14 +30,14 @@ body
 .horizontal-list li
 {
 	display: inline-block;
-	margin: 3vh 3vw 3vh 3vw;
+	margin: 20px 25px 0px 25px;
+	font-size: 1.7rem;
 }
 
 .horizontal-list li a
 {
 	text-decoration: none;
 	color: white;
-	font-size: 2rem;
 }
 
 .horizontal-list li a:hover
@@ -80,12 +80,12 @@ body
 
 #name-social-container
 {
-	margin-top: 13vh;
+	margin-top: 18vh;
 }
 
 #my-name
 {
-	font-size: 4rem;
+	font-size: 3rem;
 	letter-spacing: 0.1rem;
 	color: white;
 	font-weight: 700;
@@ -100,10 +100,8 @@ body
 .social-icons li a i:hover
 {
 	transition: all 0.4s ease-in;
-	color: lightslategrey;
+	color: darkslategrey;
 	box-shadow: 0px 0px 8px 5px white;/* This is the border color, no need to set border-color separately*/
-/*	color: #2FA1A0;*/
-/*	background: white;*/
 }
 
 section
@@ -153,10 +151,10 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 
 #my-img
 {
-	height: 20rem;
-	width: 20rem;
+	height: 18rem;
+	width: 18rem;
 	margin: auto; /* To bring image to center */
-	margin-top: -20vh;
+	margin-top: -17vh;
 }
 
 #my-img img
@@ -176,9 +174,9 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 {
 	margin: 6vh 10vw 10vh 10vw;
 	color: #505252;/*#646867;/*grey;*/
-	font-size: 2.1rem;
+	font-size: 1.8rem;
 	text-align: justify;
-	line-height: 3rem;
+	line-height: 2.5rem;
 	font-family: sans-serif;
 }
 
@@ -285,59 +283,50 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 
 
 
-/* Timeline */
+/* Timeline/Education section */
 
-.timeline
-{
-	position: relative;
-	width: 60%;
-/*	border: 2px solid black;*/
-	margin-bottom: 5rem;
+.timeline {
+    position: relative;
+    width: 75%;
 }
 
-.timeline-box
-{
-	position: relative;
-	margin: 20px;
-    width: 35%; /* percentage in general is calculated relative to parent */
-    left: 3%;
-    min-height: 200px;
-/*    border: 2px solid black;*/
-    padding: 20px; 
+.timeline-box {
+    padding: 5px;
+    width: 40%;
+    min-height: 150px;
+    position: relative;
+    left: 5%;
+    text-align: right;
 }
 
-.timeline-box:nth-child(even)
-{
+.timeline-box::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: lightgrey;
+    top: 25%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-box:nth-child(2n) {
     left: 53%;
 }
 
-.timeline-box:nth-child(odd)::after
-{
-	content: '';
-	position: absolute;
-	top: 25%;
-	right: -14.5%;
-	border-radius: 50%;
-	width: 0.5rem;
-	height: 0.5rem;
-	background-color: grey;
-	z-index: 1;
+.timeline-box:nth-child(2n+1)::after {
+    right: -11.8%;
 }
 
-.timeline-box:nth-child(even)::before
-{
-	content: '';
-	position: absolute;
-	top: 25%;
-	left: -14%;
-	border-radius: 50%;
-	width: 0.5rem;
-	height: 0.5rem;
-	background-color: grey;
-	z-index: 1;
+.timeline-box:nth-child(2n)::after {
+    left: -9%;
 }
 
-#timeline-divider
+.timeline-container {
+    padding: 8px;
+}
+
+.timeline-divider
 {
     position: absolute;
     height: 65%;
@@ -347,14 +336,52 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
     border: 2px dashed #0096fa6b;
 }
 
-#timeline-divider .timeline-traveller
+@media screen and (max-width: 600px)
+{
+	.timeline-divider
+	{
+		left: 8%;
+	}
+
+	.timeline-box
+	{
+		left: 12% /*!important;*/
+		width: 80%;
+	}
+	.timeline-box:nth-child(2n)
+	{
+		left: 12%;
+		width: 80%;
+	}
+	.timeline-box:nth-child(2n+1)
+	{
+		left: 12%;
+		width: 80%;
+	}
+
+	.timeline-box:nth-child(2n+1)::after
+	{
+		left: -7% /*!important;*/
+	}
+	.timeline-box:nth-child(2n)::after
+	{
+		left: -7%;
+	}
+
+	html
+	{
+/*		font-size: 15px;*/
+	}
+}
+
+.timeline-traveller
 {
 	position: sticky;
 	top: 25%;
 	z-index: 2;
 }
 
-#timeline-divider i
+.timeline-divider i
 {
 	transform: rotate(90deg);
 	margin-top: -35px;
@@ -372,7 +399,7 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 .org-name
 {
 	vertical-align: middle;
-	color: darkblue;
+	color: #2857a4;
 	font-size: 1.5rem;
 	font-family: sans-serif;
 }
@@ -400,21 +427,40 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 	line-height: 1.4;
 }
 
-.right-align
-{
-	line-height: 1.4;
-	text-align: right;
+/*
+.org-name {
+    font-size: 1.4rem;
+    color: #2857a4;
 }
 
-.left-align
-{
-	line-height: 1.4;
-	text-align: left;
+.org-course {
+    margin: 5px 0 0;
+    color: #eb822d;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 
+.org-time {
+    color: #9e9b9b;
+    font-weight: 100;
+    color: darkgrey;
+    font-size: 1rem;
+}
+
+.org-content {
+    font-size: 14px;
+    padding: 2px;
+    color: grey;
+    line-height: 20px;
+}
+
+.text-align-justify {
+    text-align: justify;
+}
+*/
 
 
-/* Portfolio section */
+/* Projects/Portfolio section */
 
 #portfolio-display
 {
@@ -427,7 +473,7 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 
 .portfolio-img-container
 {
-    max-width: 480px;
+    max-width: 350px;
     overflow: hidden;
     margin: 20px;
     background-size: cover;
@@ -450,7 +496,7 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
     width: 100%;
 	color: transparent;
 	text-align: center;
-	font-size: 4rem;
+	font-size: 2.5rem;
 	font-family: sans-serif;
 	padding: 10px;
 }
