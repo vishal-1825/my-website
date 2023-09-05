@@ -3,6 +3,11 @@ body
 	margin: 0px;
 }
 
+body::-webkit-scrollbar
+{ 
+	display: none; 
+}
+
 /*Body header */
 
 #body-header
@@ -14,10 +19,79 @@ body
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+	padding-top: 0.1rem;
 
 }
 
 /* Horizontal lists */
+
+.dropdown-menu
+{
+	width: 8vw;
+	position: relative;
+	left: 90vw;
+	top: 5vh;
+/*    border: solid white 1px;*/
+}
+
+.bars
+{
+	display: none;
+	color: white;
+	margin: 0;
+	margin-right: 5%;
+	text-align: center;
+    
+}
+
+.bars i
+{
+    font-size: 2rem;
+}
+
+.dropdown-list
+{
+	display: none;
+	background-color: #828470;
+	border-radius: 0.3rem;
+	opacity: 0.8;
+	box-shadow: 0px 4px 8px 1px #535547;
+}
+
+.dropdown-list ul
+{
+	margin: 0.2rem 0.2rem;
+	text-align: left;
+	padding: 0px 0.8rem;
+}
+
+.dropdown-list li
+{
+	margin: 0.4rem 0;
+}
+
+.dropdown-menu:hover .dropdown-list
+{
+	display: block;
+	position: absolute;
+	right: 0%;
+}
+
+.no-list-style
+{
+	list-style: none;
+}
+
+.no-list-style li
+{
+	font-size: 1.5rem;
+}
+
+.no-list-style li a
+{
+	color: white;
+	text-decoration: none;
+}
 
 .horizontal-list
 {
@@ -31,7 +105,7 @@ body
 {
 	display: inline-block;
 	margin: 20px 25px 0px 25px;
-	font-size: 1.7rem;
+	font-size: 1.5rem;
 }
 
 .horizontal-list li a
@@ -40,10 +114,13 @@ body
 	color: white;
 }
 
-.horizontal-list li a:hover
+.nav-menu li a
 {
-	transition: all 0.3s ease-in-out;
-/*	color: #79db8b;*/
+	transition: color 0.3s ease-in-out;
+}
+
+.nav-menu li a:hover
+{
 	color: darkslategrey;
 	border-bottom: 1px solid white;
 }
@@ -69,7 +146,7 @@ body
 	font-size: 1.5rem;
 }
 
-/* Center align class */
+/* Align classes */
 
 .element-center
 {
@@ -80,7 +157,7 @@ body
 
 #name-social-container
 {
-	margin-top: 18vh;
+	margin-top: 20vh;
 }
 
 #my-name
@@ -195,7 +272,7 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 
 #skills-display
 {
-	width: 70%;
+	width: 80%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -285,12 +362,15 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 
 /* Timeline/Education section */
 
-.timeline {
+.timeline
+{
     position: relative;
     width: 75%;
+    margin-bottom: 5rem;
 }
 
-.timeline-box {
+.timeline-box
+{
     padding: 5px;
     width: 40%;
     min-height: 150px;
@@ -299,7 +379,8 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
     text-align: right;
 }
 
-.timeline-box::after {
+.timeline-box::after
+{
     content: '';
     position: absolute;
     width: 15px;
@@ -310,19 +391,23 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
     z-index: 1;
 }
 
-.timeline-box:nth-child(2n) {
+.timeline-box:nth-child(2n)
+{
     left: 53%;
 }
 
-.timeline-box:nth-child(2n+1)::after {
+.timeline-box:nth-child(2n+1)::after
+{
     right: -11.8%;
 }
 
-.timeline-box:nth-child(2n)::after {
+.timeline-box:nth-child(2n)::after
+{
     left: -9%;
 }
 
-.timeline-container {
+.timeline-container
+{
     padding: 8px;
 }
 
@@ -334,44 +419,6 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
     top: 10%;
     left: 50%;
     border: 2px dashed #0096fa6b;
-}
-
-@media screen and (max-width: 600px)
-{
-	.timeline-divider
-	{
-		left: 8%;
-	}
-
-	.timeline-box
-	{
-		left: 12% /*!important;*/
-		width: 80%;
-	}
-	.timeline-box:nth-child(2n)
-	{
-		left: 12%;
-		width: 80%;
-	}
-	.timeline-box:nth-child(2n+1)
-	{
-		left: 12%;
-		width: 80%;
-	}
-
-	.timeline-box:nth-child(2n+1)::after
-	{
-		left: -7% /*!important;*/
-	}
-	.timeline-box:nth-child(2n)::after
-	{
-		left: -7%;
-	}
-
-	html
-	{
-/*		font-size: 15px;*/
-	}
 }
 
 .timeline-traveller
@@ -428,7 +475,8 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 }
 
 /*
-.org-name {
+.org-name
+{
     font-size: 1.4rem;
     color: #2857a4;
 }
@@ -473,12 +521,13 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 
 .portfolio-img-container
 {
-    max-width: 350px;
-    overflow: hidden;
-    margin: 20px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
+	width: 350px;
+	height: 300px;
+	overflow: hidden;
+	margin: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
 }
 
 .portfolio-img-container img
@@ -489,11 +538,11 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 
 .portfolio-desc
 {
-    position: absolute; /* Why????? */
-    top: 0; /* Why????? */
-    left: 0; /* Why????? */
-    height: 100%;
-    width: 100%;
+	position: absolute; /* Why????? */
+	top: 0; /* Why????? */
+	left: 0; /* Why????? */
+	height: 100%;
+	width: 100%;
 	color: transparent;
 	text-align: center;
 	font-size: 2.5rem;
@@ -509,8 +558,8 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 .portfolio-img-container:hover .portfolio-desc
 {
 	transition: all 0.5s ease-in-out;
-    background-color: #80808078;
-    color: white;
+	background-color: #80808078;
+	color: white;
 }
 
 /* Contact section */
@@ -539,19 +588,19 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 #contact-form
 {
 /*	border: 1px solid white;*/
-	width: 33vw;
 	margin-bottom: 50px;
+	margin-left: 5%;
 }
 
 #contact-form input, textarea
 {
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	width: 33vw;
 	padding: 10px 20px;
 	background: transparent;
 	border: solid 0px transparent;
 	border-bottom: 2px solid white;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	color: white;
 }
 
@@ -562,6 +611,7 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 	border: solid 2px white;
 	font-size: 1.1rem;
 	color: white;
+	margin-top: 3%;
 	margin-left: 35%;
 }
 
@@ -577,7 +627,7 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 	width: 40vw;
 /*	border: 1px solid white;*/
 	margin-bottom: 50px;
-	padding: 18px 0 0 0;
+	padding: 10px 0 0 0;
 }
 
 .my-details-heading
@@ -596,12 +646,75 @@ section:nth-child(2n) /* Section numbers that are odd will have light grey backg
 
 input:focus, select:focus, textarea:focus, button:focus
 {
-    outline: none;
+	outline: none;
 }
 
 
 
+@media only screen and (max-width: 600px)
+{
+	.timeline-divider
+	{
+		left: 8%;
+	}
 
+	.timeline-box
+	{
+		left: 12% !important;
+		width: 80%;
+	}
+	.timeline-box:nth-child(2n)
+	{
+		left: 12%;
+		width: 80%;
+	}
+	
+	.timeline-box:nth-child(2n+1)
+	{
+		left: 12%;
+		width: 80%;
+	}
 
+	.timeline-box:nth-child(2n+1)::after
+	{
+		left: -7% !important;
+	}
+	.timeline-box:nth-child(2n)::after
+	{
+		left: -7%;
+	}
+}
 
+@media only screen and (max-width: 770px)
+{
+	#contact-form
+	{
+		margin-left: 0;
+	}
+	#contact-form input, textarea
+	{
+		margin-bottom: 30px;
+		width: 70vw;
+		padding: 5px 15px;
+		font-size: 1.1rem;
+		margin-bottom: 20px;
+	}
+	#my-details-container
+	{
+		width: 90vw;
+		margin-bottom: 20px;
+	}
 
+	.bars
+	{
+        	display: block;
+    	}
+	.nav-menu
+	{
+	display: none;
+	}
+	#name-social-container
+	{
+		margin-top: 22vh;
+	}
+}
