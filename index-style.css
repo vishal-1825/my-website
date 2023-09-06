@@ -688,6 +688,11 @@ input:focus, select:focus, textarea:focus, button:focus
 		display: inline-block;
 		margin: 2.5px 5px 2.5px 5px;
 	}
+
+	#about-content
+	{
+		font-size: 1.3rem !important;
+	}
 }
 
 
@@ -722,6 +727,11 @@ input:focus, select:focus, textarea:focus, button:focus
 	#name-social-container
 	{
 		margin-top: 22vh;
+	}
+
+	#about-content
+	{
+		font-size: 1.5rem;
 	}
 
 }
@@ -762,6 +772,10 @@ input:focus, select:focus, textarea:focus, button:focus
 		margin: 2.5px 5px 2.5px 5px;
 	}
 
+	#about-content
+	{
+		font-size: 1.5rem;
+	}
 }
 
 
@@ -794,4 +808,10 @@ input:focus, select:focus, textarea:focus, button:focus
 	{
 		font-size: 1.2rem;
 	}
+
+	#about-content
+	{
+		font-size: 1.3rem;
+	}
 }
+
